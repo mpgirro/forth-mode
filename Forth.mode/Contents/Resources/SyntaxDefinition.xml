@@ -269,11 +269,13 @@
 
         </default>
         
+		<!--
          <state id="Comment" color="#236E25" font-style="italic">
-            <begin><regex>\(\ </regex></begin> <!--  -->
-            <end><regex>\)\ </regex></end> <!--  -->
+            <begin><regex>\(\ </regex></begin> 
+            <end><regex>\)\ </regex></end> 
         </state>
-        
+        -->
+			
         <state id="SingleComment" color="#236E25" background-color="none" font-weight="normal" font-style="italic">
             <begin><string>\\\ </string></begin> <!--  -->
             <end><regex>[\n\r]</regex></end> <!--  -->
