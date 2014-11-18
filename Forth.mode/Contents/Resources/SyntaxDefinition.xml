@@ -45,12 +45,12 @@
 				<string>4tuck</string>
 				<string>8swap</string>
 				<string>8dup</string>
-				<string>&gt;r</string> <!--  -->
-				<string>&lt;r</string> <!--  -->
+				<string>&gt;r</string> <!-- >r -->
+				<string>&lt;r</string> <!-- <r -->
 				<string>r&#64;</string> <!-- r@ -->
 				<string>rdrop</string>
-				<string>2&gt;r</string> <!--  -->
-				<string>2r&gt;</string> <!--  -->
+				<string>2&gt;r</string> <!-- 2>r -->
+				<string>2r&gt;</string> <!-- 2r> -->
 				<string>2r&#64;</string> <!-- 2r@ -->
 				<string>2rdrop</string>
 				<string>4&gt;r</string> <!--  -->
@@ -269,12 +269,12 @@
 
         </default>
         
-		<!--
+		
          <state id="Comment" color="#236E25" font-style="italic">
-            <begin><regex>\(\ </regex></begin> 
-            <end><regex>\)\ </regex></end> 
+            <begin><regex>\ \(</regex></begin> 
+            <end><regex>\ \)</regex></end> 
         </state>
-        -->
+        
 			
         <state id="SingleComment" color="#236E25" background-color="none" font-weight="normal" font-style="italic">
             <begin><string>\\\ </string></begin> <!--  -->
