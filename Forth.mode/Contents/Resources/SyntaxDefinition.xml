@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "syntax.dtd">
+<syntax>
+
+    <head>
+        <name>C</name> <!-- The definitions title -->
+        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens> <!-- Valid Characters for Variables -->
+        <!-- <charsdelimitingtokens></charsdelimitingtokens> -->
+    </head>
+
+    <states>
+    
+        <default id="Base" color="#000" background-color="#fff" font-weight="normal" font-style="normal">
+			
+            <keywords id="StackManipulationKeywords" color="#881350" useforautocomplete="yes">
+                <string>drop</string>
+				<string>nip</string>
+				<string>dup</string>
+				<string>over</string>
+				<string>tuck</string>
+				<string>swap</string>
+				<string>rot</string>
+				<string>-rot</string>
+				<string>?dup</string>
+				<string>pick</string>
+				<string>roll</string>
+				<string>2drop</string>
+				<string>2nip</string>
+				<string>2dup</string>
+				<string>2over</string>
+				<string>2tuck</string>
+				<string>2swap</string>
+				<string>2rot</string>
+				<string>2-rot</string>
+				<string>3dup</string>
+				<string>4dup</string>
+				<string>5dup</string>
+				<string>3drop</string>
+				<string>4drop</string>
+				<string>5drop</string>
+				<string>8drop</string>
+				<string>4swap</string>
+				<string>4rot</string>
+				<string>4-rot</string>
+				<string>4tuck</string>
+				<string>8swap</string>
+				<string>8dup</string>
+				<string>&gt;r</string>
+				<string>&lt;r</string>
+				<string>r@</string>
+				<string>rdrop</string>
+				<string>2&gt;r</string>
+				<string>2r&gt;</string>
+				<string>2r@</string>
+				<string>2rdrop</string>
+				<string>4&gt;r</string>
+				<string>4r&gt;</string>
+				<string>4r@</string>
+				<string>4rdrop</string>
+				<string>fdrop</string>
+				<string>fnip</string>
+				<string>fdup</string>
+				<string>fover</string>
+				<string>ftuck</string>
+				<string>fswap</string>
+				<string>frot</string>
+            </keywords>
+			<keywords id="StackPointerManipulationKeywords" color="#881350" useforautocomplete="yes">
+				<string>sp@</string>
+				<string>sp!</string>
+				<string>fp@</string>
+				<string>fp!</string>
+				<string>rp@</string>
+				<string>rp!</string>
+				<string>lp@</string>
+				<string>lp!</string>
+        	</keywords>
+			
+			<keywords id="AddressOperationsKeywords" color="#881350" useforautocomplete="yes">
+				<string>@</string>
+				<string>!</string>
+				<string>+!</string>
+				<string>c@</string>
+				<string>c!</string>
+				<string>2@</string>
+				<string>2!</string>
+				<string>f@</string>
+				<string>f!</string>
+				<string>sf@</string>
+				<string>sf!</string>
+				<string>df@</string>
+				<string>df!</string>
+				<string>chars</string>
+				<string>char+</string>
+				<string>cells</string>
+				<string>cell+</string>
+				<string>cell</string>
+				<string>align</string>
+				<string>aligned</string>
+				<string>floats</string>
+				<string>float+</string>
+				<string>float</string>
+				<string>falign</string>
+				<string>faligned</string>
+				<string>sfloats</string>
+				<string>sfloat+</string>
+				<string>sfalign</string>
+				<string>sfaligned</string>
+				<string>dfloats</string>
+				<string>dfloat+</string>
+				<string>dfalign</string>
+				<string>dfaligned</string>
+				<string>maxalign</string>
+				<string>maxaligned</string>
+				<string>cfalign</string>
+				<string>cfaligned</string>
+				<string>address-unit-bits</string>
+				<string>allot</string>
+				<string>allocate</string>
+				<string>here</string>
+				<string>move</string>
+				<string>erase</string>
+				<string>cmove</string>
+				<string>cmove></string>
+				<string>fill</string>
+				<string>blank</string>
+        	</keywords>
+			
+			<keywords id="ConditionalsKeywords" color="#881350" useforautocomplete="yes">
+				<string>if</string>
+				<string>else</string>
+				<string>endif</string>
+				<string>then</string>
+				<string>case</string>
+				<string>of</string>
+				<string>endof</string>
+				<string>endcase</string>
+				<string>?dup-if</string>
+				<string>?dup-0=-if</string>
+				<string>ahead</string>
+				<string>cs-pick</string>
+				<string>cs-roll</string>
+				<string>catch</string>
+				<string>throw</string>
+				<string>within</string>
+        	</keywords>
+			
+			<keywords id="IterationsKeywords" color="#881350" useforautocomplete="yes">
+				<string>begin</string>
+				<string>while</string>
+				<string>repeat</string>
+				<string>until</string>
+				<string>again</string>
+				<string>?do</string>
+				<string>loop</string>
+				<string>i</string>
+				<string>j</string>
+				<string>k</string>
+				<string>+do</string>
+				<string>u+do</string>
+				<string>-do</string>
+				<string>u-do</string>
+				<string>do</string>
+				<string>+loop</string>
+				<string>-loop</string>
+				<string>unloop</string>
+				<string>leave</string>
+				<string>?leave</string>
+				<string>exit</string>
+				<string>done</string>
+				<string>for</string>
+				<string>next</string>
+        	</keywords>
+			
+			<keywords id="NewWordsKeywords" color="#881350" useforautocomplete="yes">
+				<string>;</string>
+				<string>;m</string>
+				<string>;class</string>
+				<string>;object</string>
+				<string>constant</string>
+				<string>2constant</string>
+				<string>fconstant</string>
+				<string>variable</string>
+				<string>2variable</string>
+				<string>fvariable</string>
+				<string>create</string>
+				<string>user</string>
+				<string>value</string>
+				<string>to</string>
+				<string>defere</string>
+				<string>is</string>
+				<string>does></string>
+				<string>immediate</string>
+				<string>compile-only</string>
+				<string>compile</string>
+				<string>restrict</string>
+				<string>interprete</string>
+				<string>postpone</string>
+				<string>execute</string>
+				<string>literal</string>
+				<string>create-interpret/compile</string>
+				<string>interpretation&gt;</string>
+				<string>&lt;interpretation</string>
+				<string>compilation&gt;</string>
+				<string>&lt;compilation</string>
+				<string>]</string>
+				<string>lastxt</string>
+				<string>comp'</string>
+				<string>postpone,</string>
+				<string>find-name</string>
+				<string>name&gt;int</string>
+				<string>name?int</string>
+				<string>name&gt;comp</string>
+				<string>name&gt;string</string>
+				<string>state</string>
+				<string>c;</string>
+				<string>cvariable</string>
+				<string>,</string>
+				<string>2,</string>
+				<string>f,</string>
+				<string>c,</string>
+        	</keywords>
+			
+			<keywords id="DebuggingKeywords" color="#881350" useforautocomplete="yes">
+				<string>printdebugdata</string>
+				<string>printdebugline</string>
+        	</keywords>
+			
+			<keywords id="AssamblerKeywords" color="#881350" useforautocomplete="yes">
+				<string>assambler</string>
+				<string>code</string>
+				<string>end-code</string>
+				<string>;code</string>
+				<string>flush-icache</string>
+				<string>c,</string>
+        	</keywords>
+			
+			<keywords id="BasicCharacterOperationsKeywords" color="#881350" useforautocomplete="yes">
+				<string>(.)</string>
+				<string>char</string>
+				<string>expect</string>
+				<string>find</string>
+				<string>word</string>
+				<string>type</string>
+				<string>-trailing</string>
+				<string>emit</string>
+				<string>key</string>
+				<string>key?</string>
+				<string>tib</string>
+				<string>cr</string>
+        	</keywords>
+			
+            <keywords id="Keywords" color="#881350" useforautocomplete="yes">
+                <string></string>
+            </keywords>
+
+            <keywords id="Numbers" color="#00f" useforautocomplete="no">
+				<regex>(?&lt;=[^[A-Za-z0-9]]|^)((([0-9]+\.[0-9]*)|(\.[0-9]+)([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]))(([uU][lL]?)|([lL][uU]?))?))(?=[^[A-Za-z0-9]]|$)</regex>
+            </keywords>
+            <keywords id="Characters" color="#00f" useforautocomplete="no">
+				<regex>('.')</regex>
+            </keywords>
+            <keywords id="FunctionRegex" color="#003369" useforautocomplete="yes">
+				<regex>^[a-z][A-Za-z0-9_]*</regex>
+            </keywords>
+
+        </default>
+        
+         <state id="Comment" color="#236E25" font-style="italic">
+            <begin><regex>\(\ </regex></begin>
+            <end><regex>\)\ </regex></end>
+        </state>
+        
+        <state id="SingleComment" color="#236E25" background-color="none" font-weight="normal" font-style="italic">
+            <begin><string>\\\ </string></begin>
+            <end><regex>[\n\r]</regex></end>
+        </state>
+    </states>
+
+</syntax>
