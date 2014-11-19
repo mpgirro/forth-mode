@@ -3,8 +3,8 @@
 <syntax>
 
     <head>
-        <name>C</name> <!-- The definitions title -->
-        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens> <!-- Valid Characters for Variables -->
+        <name>Forth</name> <!-- The definitions title -->
+        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@-+></,;!?=]]></charsintokens> <!-- Valid Characters for Variables -->
         <!-- <charsdelimitingtokens></charsdelimitingtokens> -->
     </head>
 
@@ -20,8 +20,8 @@
 				<string>tuck</string>
 				<string>swap</string>
 				<string>rot</string>
-				<string>&#45;rot</string> <!-- -rot -->
-				<string>&#63;dup</string> <!-- ?dup -->
+				<string>-rot</string> 
+				<string>?dup</string>
 				<string>pick</string>
 				<string>roll</string>
 				<string>2drop</string>
@@ -31,7 +31,7 @@
 				<string>2tuck</string>
 				<string>2swap</string>
 				<string>2rot</string>
-				<string>2&#45;rot</string> <!-- 2-rot -->
+				<string>2-rot</string> <!-- 2-rot -->
 				<string>3dup</string>
 				<string>4dup</string>
 				<string>5dup</string>
@@ -41,21 +41,21 @@
 				<string>8drop</string>
 				<string>4swap</string>
 				<string>4rot</string>
-				<string>4&#45;rot</string> 4-rot
+				<string>4-rot</string> 
 				<string>4tuck</string>
 				<string>8swap</string>
 				<string>8dup</string>
 				<string>&gt;r</string> <!-- >r -->
 				<string>&lt;r</string> <!-- <r -->
-				<string>r&#64;</string> <!-- r@ -->
+				<string>r@</string> <!-- r@ -->
 				<string>rdrop</string>
 				<string>2&gt;r</string> <!-- 2>r -->
 				<string>2r&gt;</string> <!-- 2r> -->
-				<string>2r&#64;</string> <!-- 2r@ -->
+				<string>2r@</string> <!-- 2r@ -->
 				<string>2rdrop</string>
-				<string>4&gt;r</string> <!--  -->
-				<string>4r&gt;</string> <!--  -->
-				<string>4r&#64;</string> <!-- 4r@ -->
+				<string>4&gt;r</string> 
+				<string>4r&gt;</string> 
+				<string>4r@</string> 
 				<string>4rdrop</string>
 				<string>fdrop</string>
 				<string>fnip</string>
@@ -67,55 +67,55 @@
             </keywords>
 			
 			<keywords id="StackPointerManipulationKeywords" color="#881350" useforautocomplete="yes">
-				<string>sp&#64;</string> <!-- sp@ -->
-				<string>sp&#33;</string> <!-- sp! -->
-				<string>fp&#64;</string> <!-- fp@ -->
-				<string>fp&#33;</string> <!-- fp! -->
-				<string>rp&#64;</string> <!-- rp@ -->
-				<string>rp&#33;</string> <!-- rp! -->
-				<string>lp&#64;</string> <!-- lp@ -->
-				<string>lp&#33;</string> <!-- lp! -->
+				<string>sp@</string> <!-- sp@ -->
+				<string>sp!</string> <!-- sp! -->
+				<string>fp@</string> <!-- fp@ -->
+				<string>fp!</string> <!-- fp! -->
+				<string>rp@</string> <!-- rp@ -->
+				<string>rp!</string> <!-- rp! -->
+				<string>lp@</string> <!-- lp@ -->
+				<string>lp!</string> <!-- lp! -->
         	</keywords>
 			
 			<keywords id="AddressOperationsKeywords" color="#881350" useforautocomplete="yes">
-				<string>&#64;</string> <!-- @ -->
-				<string>&#33;</string> <!-- ! -->
-				<string>&#43;&#33;</string> <!-- +! -->
-				<string>c&#64;</string> <!-- c@ -->
-				<string>c&#33;</string> <!-- c! -->
-				<string>2&#64;</string> <!-- 2@ -->
-				<string>2&#33;</string> <!-- 2! -->
-				<string>f&#64;</string> <!-- f@ -->
-				<string>f&#33;</string> <!-- f! -->
-				<string>sf&#64;</string> <!-- sf@ -->
-				<string>sf&#33;</string> <!-- sf! -->
-				<string>df&#64;</string> <!-- df@ -->
-				<string>df&#33;</string> <!-- df! -->
+				<string>@</string> <!-- @ -->
+				<string>!</string> <!-- ! -->
+				<string>+!</string> <!-- +! -->
+				<string>c@</string> <!-- c@ -->
+				<string>c!</string> <!-- c! -->
+				<string>2@</string> <!-- 2@ -->
+				<string>2!</string> <!-- 2! -->
+				<string>f@</string> <!-- f@ -->
+				<string>f!</string> <!-- f! -->
+				<string>sf@</string> <!-- sf@ -->
+				<string>sf!</string> <!-- sf! -->
+				<string>df@</string> <!-- df@ -->
+				<string>df!</string> <!-- df! -->
 				<string>chars</string>
-				<string>char&#43;</string> <!-- char+ -->
+				<string>char+</string> <!-- char+ -->
 				<string>cells</string>
-				<string>cell&#43;</string> <!-- cell+ -->
+				<string>cell+</string> <!-- cell+ -->
 				<string>cell</string>
 				<string>align</string>
 				<string>aligned</string>
 				<string>floats</string>
-				<string>float&#43;</string> <!-- float+ -->
+				<string>float+</string> <!-- float+ -->
 				<string>float</string>
 				<string>falign</string>
 				<string>faligned</string>
 				<string>sfloats</string>
-				<string>sfloat&#43;</string> <!-- sfloat+ -->
+				<string>sfloat+</string> <!-- sfloat+ -->
 				<string>sfalign</string>
 				<string>sfaligned</string>
 				<string>dfloats</string>
-				<string>dfloat&#43;</string> <!-- dfloat+ -->
+				<string>dfloat+</string> <!-- dfloat+ -->
 				<string>dfalign</string>
 				<string>dfaligned</string>
 				<string>maxalign</string>
 				<string>maxaligned</string>
 				<string>cfalign</string>
 				<string>cfaligned</string>
-				<string>address&#45;unit&#45;bits</string> <!-- address-unit-bits -->
+				<string>address-unit-bits</string> <!-- address-unit-bits -->
 				<string>allot</string>
 				<string>allocate</string>
 				<string>here</string>
@@ -136,11 +136,11 @@
 				<string>of</string>
 				<string>endof</string>
 				<string>endcase</string>
-				<string>&#63;dup&#45;if</string> <!-- ?dup-if -->
-				<string>&#63;dup&#45;0=&#45;if</string> <!-- ?dup-0=-if -->
+				<string>?dup-if</string> <!-- ?dup-if -->
+				<string>?dup-0=-if</string> <!-- ?dup-0=-if -->
 				<string>ahead</string>
-				<string>cs&#45;pick</string> <!--  -->
-				<string>cs&#45;roll</string> <!--  -->
+				<string>cs-pick</string> <!--  -->
+				<string>cs-roll</string> <!--  -->
 				<string>catch</string>
 				<string>throw</string>
 				<string>within</string>
@@ -152,21 +152,21 @@
 				<string>repeat</string>
 				<string>until</string>
 				<string>again</string>
-				<string>&#63;do</string> <!-- ?do -->
+				<string>?do</string> <!-- ?do -->
 				<string>loop</string>
 				<string>i</string>
 				<string>j</string>
 				<string>k</string>
-				<string>&#43;do</string> <!-- +do -->
-				<string>u&#43;do</string> <!-- u+do -->
-				<string>&#45;do</string> <!-- -do -->
-				<string>u&#45;do</string> <!-- u-do -->
+				<string>+do</string> <!-- +do -->
+				<string>u+do</string> <!-- u+do -->
+				<string>-do</string> <!-- -do -->
+				<string>u-do</string> <!-- u-do -->
 				<string>do</string>
-				<string>u&#43;loop</string> <!-- +loop -->
-				<string>&#45;loop</string> <!-- -loop -->
+				<string>u+loop</string> <!-- +loop -->
+				<string>-loop</string> <!-- -loop -->
 				<string>unloop</string>
 				<string>leave</string>
-				<string>&#63;leave</string> <!-- ?leave -->
+				<string>?leave</string> <!-- ?leave -->
 				<string>exit</string>
 				<string>done</string>
 				<string>for</string>
@@ -192,14 +192,14 @@
 				<string>is</string>
 				<string>does&gt;</string> <!-- does> -->
 				<string>immediate</string>
-				<string>compile&#45;only</string> <!-- compile-only -->
+				<string>compile-only</string> <!-- compile-only -->
 				<string>compile</string>
 				<string>restrict</string>
 				<string>interprete</string>
 				<string>postpone</string>
 				<string>execute</string>
 				<string>literal</string>
-				<string>create&#45;interpret&#47;compile</string> <!-- create-interpret/compile -->
+				<string>create-interpret/compile</string> <!-- create-interpret/compile -->
 				<string>interpretation&gt;</string> <!--  -->
 				<string>&lt;interpretation</string> <!--  -->
 				<string>compilation&gt;</string> <!--  -->
@@ -207,19 +207,19 @@
 				<string>]</string> <!--  -->
 				<string>lastxt</string>
 				<string>comp&#39;</string> <!-- comp' -->
-				<string>postpone&#44;</string> <!-- postpone, -->
-				<string>find&#45;name</string> <!--  -->
+				<string>postpone,</string> <!-- postpone, -->
+				<string>find-name</string> <!--  -->
 				<string>name&gt;int</string> <!--  -->
-				<string>name&#63;int</string> <!-- name?int -->
+				<string>name?int</string> <!-- name?int -->
 				<string>name&gt;comp</string> <!--  -->
 				<string>name&gt;string</string> <!--  -->
 				<string>state</string>
 				<string>c;</string> <!--  -->
 				<string>cvariable</string>
-				<string>&#44;</string> <!-- , -->
-				<string>2&#44;</string> <!-- 2, -->
-				<string>f&#44;</string> <!-- f, -->
-				<string>c&#44;</string> <!-- c, -->
+				<string>,</string> <!-- , -->
+				<string>2,</string> <!-- 2, -->
+				<string>f,</string> <!-- f, -->
+				<string>c,</string> <!-- c, -->
         	</keywords>
 			
 			<keywords id="DebuggingKeywords" color="#881350" useforautocomplete="yes">
@@ -233,7 +233,7 @@
 				<string>end-code</string> <!--  -->
 				<string>;code</string> <!--  -->
 				<string>flush-icache</string> <!--  -->
-				<string>c&#44;</string> <!-- c, -->
+				<string>c,</string> <!-- c, -->
         	</keywords>
 			
 			<keywords id="BasicCharacterOperationsKeywords" color="#881350" useforautocomplete="yes">
@@ -243,10 +243,10 @@
 				<string>find</string>
 				<string>word</string>
 				<string>type</string>
-				<string>&#45;trailing</string> <!-- -trailing -->
+				<string>-trailing</string> <!-- -trailing -->
 				<string>emit</string>
 				<string>key</string>
-				<string>key&#63;</string> <!-- key? -->
+				<string>key?</string> <!-- key? -->
 				<string>tib</string>
 				<string>cr</string>
         	</keywords>

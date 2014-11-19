@@ -9,7 +9,7 @@
     <key>NSHumanReadableCopyright</key>
 	<string>© 2014 Maximilian Irro max@disposia.org</string>
     <key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.1-beta</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
     <key>CFBundleGetInfoString</key>
