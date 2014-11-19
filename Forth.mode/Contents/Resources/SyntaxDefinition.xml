@@ -4,7 +4,7 @@
 
     <head>
         <name>Forth</name> <!-- The definitions title -->
-        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@-+></,;!?=]]></charsintokens> <!-- Valid Characters for Variables -->
+        <charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@-+*~></.[]{},:;!?=]]></charsintokens> <!-- Valid Characters for Variables -->
         <!-- <charsdelimitingtokens></charsdelimitingtokens> -->
     </head>
 
@@ -31,9 +31,10 @@
 				<string>&apos;</string>
 				<string>&apos;cold</string>
 				<string>(</string>
-				<string>core,file</string>
 				<string>(local)</string>
 				<string>local</string>
+				<string>>body</string>
+				<string>>order</string>
 				<string>)</string>
 				<string>*</string>
 				<string>*/</string>
@@ -41,19 +42,22 @@
 				<string>+</string>
 				<string>+!</string>
 				<string>+DO</string>
+				<string>+do</string>
 				<string>+field</string>
 				<string>+load</string>
 				<string>+LOOP</string>
+				<string>+loop</string>
 				<string>+thru</string>
 				<string>+x/string</string>
 				<string>,</string>
 				<string>-</string>
 				<string>--&amp;gt;</string>
 				<string>-DO</string>
+				<string>-do</string>
 				<string>-LOOP</string>
+				<string>-loop</string>
 				<string>-rot</string>
 				<string>-trailing</string>
-				<string>string</string>
 				<string>-trailing-garbage</string>
 				<string>.</string>
 				<string>.&quot;</string>
@@ -63,7 +67,6 @@
 				<string>.id</string>
 				<string>F83</string>
 				<string>.name</string>
-				<string>gforth-obsolete</string>
 				<string>.path</string>
 				<string>.r</string>
 				<string>.s</string>
@@ -72,7 +75,6 @@
 				<string>/l</string>
 				<string>/mod</string>
 				<string>/string</string>
-				<string>string</string>
 				<string>/w</string>
 				<string>0&amp;lt;</string>
 				<string>0&amp;lt;=</string>
@@ -138,10 +140,14 @@
 				<string>&amp;gt;r</string>
 				<string>?</string>
 				<string>?DO</string>
+				<string>?do</string>
 				<string>?dup</string>
 				<string>?DUP-0=-IF</string>
+				<string>?dup-0=-if</string>
 				<string>?DUP-IF</string>
+				<string>?dup-if</string>
 				<string>?LEAVE</string>
+				<string>?leave</string>
 				<string>@</string>
 				<string>@local#</string>
 				<string>[</string>
@@ -172,7 +178,6 @@
 				<string>[UNTIL]</string>
 				<string>[WHILE]</string>
 				<string>\</string>
-				<string>core-ext,block-ext</string>
 				<string>\c</string>
 				<string>\G</string>
 				<string>]</string>
@@ -180,6 +185,7 @@
 				<string>abort</string>
 				<string>core,exception-ext</string>
 				<string>ABORT&quot;</string>
+				<string>abort&quot;</string>
 				<string>core,exception-ext</string>
 				<string>abs</string>
 				<string>accept</string>
@@ -187,7 +193,9 @@
 				<string>add-lib</string>
 				<string>ADDRESS-UNIT-BITS</string>
 				<string>AGAIN</string>
+				<string>again</string>
 				<string>AHEAD</string>
+				<string>ahead</string>
 				<string>Alias</string>
 				<string>align</string>
 				<string>aligned</string>
@@ -210,25 +218,22 @@
 				<string>assert2(</string>
 				<string>assert3(</string>
 				<string>ASSUME-LIVE</string>
+				<string>assume-live</string>
 				<string>at-xy</string>
 				<string>base</string>
 				<string>base-execute</string>
 				<string>BEGIN</string>
+				<string>begin</string>
 				<string>begin-structure</string>
 				<string>bin</string>
 				<string>bind</string>
 				<string>bind&apos;</string>
 				<string>bl</string>
 				<string>blank</string>
-				<string>string</string>
 				<string>blk</string>
-				<string>block</string>
-				<string>block</string>
-				<string>block</string>
 				<string>block-included</string>
 				<string>block-offset</string>
 				<string>block-position</string>
-				<string>block</string>
 				<string>bootmessage</string>
 				<string>bound</string>
 				<string>bounds</string>
@@ -236,7 +241,6 @@
 				<string>break:</string>
 				<string>broken-pipe-error</string>
 				<string>buffer</string>
-				<string>block</string>
 				<string>bye</string>
 				<string>c!</string>
 				<string>C&quot;</string>
@@ -296,7 +300,9 @@
 				<string>create-file</string>
 				<string>create-interpret/compile</string>
 				<string>CS-PICK</string>
+				<string>cs-pick</string>
 				<string>CS-ROLL</string>
+				<string>cs-roll</string>
 				<string>current</string>
 				<string>current&apos;</string>
 				<string>current-interface</string>
@@ -350,14 +356,17 @@
 				<string>dmin</string>
 				<string>dnegate</string>
 				<string>DO</string>
+				<string>do</string>
 				<string>docol:</string>
 				<string>docon:</string>
 				<string>dodefer:</string>
 				<string>does-code!</string>
 				<string>does-handler!</string>
 				<string>DOES&amp;gt;</string>
+				<string>does&amp;gt;</string>
 				<string>dofield:</string>
 				<string>DONE</string>
+				<string>done</string>
 				<string>double%</string>
 				<string>douser:</string>
 				<string>dovar:</string>
@@ -377,6 +386,7 @@
 				<string>ekey&amp;gt;fkey</string>
 				<string>ekey?</string>
 				<string>ELSE</string>
+				<string>else</string>
 				<string>emit</string>
 				<string>emit-file</string>
 				<string>empty-buffer</string>
@@ -393,6 +403,7 @@
 				<string>end-structure</string>
 				<string>endcase</string>
 				<string>ENDIF</string>
+				<string>endif</string>
 				<string>endof</string>
 				<string>endscope</string>
 				<string>endtry</string>
@@ -406,6 +417,7 @@
 				<string>execute-parsing</string>
 				<string>execute-parsing-file</string>
 				<string>EXIT</string>
+				<string>exit</string>
 				<string>exitm</string>
 				<string>expect</string>
 				<string>f!</string>
@@ -481,7 +493,6 @@
 				<string>file-position</string>
 				<string>file-size</string>
 				<string>file-status</string>
-				<string>file-ext</string>
 				<string>fill</string>
 				<string>find</string>
 				<string>core,search</string>
@@ -501,9 +512,8 @@
 				<string>floor</string>
 				<string>float</string>
 				<string>FLOORED</string>
+				<string>floored</string>
 				<string>flush</string>
-				<string>block</string>
-				<string>file-ext</string>
 				<string>flush-icache</string>
 				<string>fm/mod</string>
 				<string>fmax</string>
@@ -514,10 +524,10 @@
 				<string>float</string>
 				<string>fnip</string>
 				<string>FOR</string>
+				<string>for</string>
 				<string>form</string>
 				<string>Forth</string>
 				<string>forth-wordlist</string>
-				<string>search</string>
 				<string>fover</string>
 				<string>float</string>
 				<string>fp!</string>
@@ -548,9 +558,7 @@
 				<string>f~rel</string>
 				<string>get-block-fid</string>
 				<string>get-current</string>
-				<string>search</string>
 				<string>get-order</string>
-				<string>search</string>
 				<string>getenv</string>
 				<string>heap-new</string>
 				<string>here</string>
@@ -561,6 +569,7 @@
 				<string>i</string>
 				<string>id.</string>
 				<string>IF</string>
+				<string>if</string>
 				<string>iferror</string>
 				<string>immediate</string>
 				<string>implementation</string>
@@ -616,6 +625,7 @@
 				<string>latest</string>
 				<string>latestxt</string>
 				<string>LEAVE</string>
+				<string>leave</string>
 				<string>lib-error</string>
 				<string>lib-sym</string>
 				<string>link</string>
@@ -623,8 +633,8 @@
 				<string>list-size</string>
 				<string>Literal</string>
 				<string>load</string>
-				<string>block</string>
 				<string>LOOP</string>
+				<string>loop</string>
 				<string>lp!</string>
 				<string>lp!</string>
 				<string>lp+!#</string>
@@ -648,7 +658,6 @@
 				<string>ms</string>
 				<string>naligned</string>
 				<string>name</string>
-				<string>gforth-obsolete</string>
 				<string>name&amp;gt;comp</string>
 				<string>name&amp;gt;int</string>
 				<string>name&amp;gt;string</string>
@@ -658,12 +667,12 @@
 				<string>new</string>
 				<string>new[]</string>
 				<string>NEXT</string>
+				<string>next</string>
 				<string>next-arg</string>
 				<string>nextname</string>
 				<string>nip</string>
 				<string>noname</string>
 				<string>nothrow</string>
-				<string>object</string>
 				<string>of</string>
 				<string>off</string>
 				<string>on</string>
@@ -684,7 +693,6 @@
 				<string>parse</string>
 				<string>parse-name</string>
 				<string>parse-word</string>
-				<string>gforth-obsolete</string>
 				<string>path+</string>
 				<string>path-allot</string>
 				<string>path=</string>
@@ -714,10 +722,9 @@
 				<string>recurse</string>
 				<string>recursive</string>
 				<string>refill</string>
-				<string>core-ext,block-ext,file-ext</string>
 				<string>rename-file</string>
-				<string>file-ext</string>
 				<string>REPEAT</string>
+				<string>repeat</string>
 				<string>reposition-file</string>
 				<string>represent</string>
 				<string>float</string>
@@ -737,32 +744,25 @@
 				<string>rp@</string>
 				<string>rshift</string>
 				<string>S&quot;</string>
-				<string>core,file</string>
 				<string>s&amp;gt;d</string>
 				<string>s&amp;gt;number?</string>
 				<string>s&amp;gt;unumber?</string>
 				<string>s\&quot;</string>
 				<string>save-buffer</string>
 				<string>save-buffers</string>
-				<string>block</string>
 				<string>save-input</string>
 				<string>savesystem</string>
 				<string>scope</string>
 				<string>scr</string>
 				<string>seal</string>
-				<string>search</string>
-				<string>string</string>
 				<string>search-wordlist</string>
-				<string>search</string>
 				<string>see</string>
 				<string>see-code</string>
 				<string>see-code-range</string>
 				<string>selector</string>
 				<string>self</string>
 				<string>set-current</string>
-				<string>search</string>
 				<string>set-order</string>
-				<string>search</string>
 				<string>set-precision</string>
 				<string>sf!</string>
 				<string>sf@</string>
@@ -779,13 +779,11 @@
 				<string>simple-see-range</string>
 				<string>sl@</string>
 				<string>SLiteral</string>
-				<string>string</string>
 				<string>slurp-fid</string>
 				<string>slurp-file</string>
 				<string>sm/rem</string>
 				<string>source</string>
 				<string>source-id</string>
-				<string>core-ext,file</string>
 				<string>sourcefilename</string>
 				<string>sourceline#</string>
 				<string>sp!</string>
@@ -809,6 +807,7 @@
 				<string>system</string>
 				<string>table</string>
 				<string>THEN</string>
+				<string>then</string>
 				<string>this</string>
 				<string>threading-method</string>
 				<string>throw</string>
@@ -816,6 +815,7 @@
 				<string>tib</string>
 				<string>time&amp;date</string>
 				<string>TO</string>
+				<string>to</string>
 				<string>to-this</string>
 				<string>toupper</string>
 				<string>true</string>
@@ -824,6 +824,7 @@
 				<string>type</string>
 				<string>typewhite</string>
 				<string>U+DO</string>
+				<string>u+do</string>
 				<string>U-DO</string>
 				<string>u-do</string>
 				<string>u.</string>
@@ -840,11 +841,11 @@
 				<string>under+</string>
 				<string>unloop</string>
 				<string>UNREACHABLE</string>
+				<string>unreachable</string>
 				<string>UNTIL</string>
 				<string>until</string>
 				<string>unused</string>
 				<string>update</string>
-				<string>block</string>
 				<string>updated?</string>
 				<string>use</string>
 				<string>User</string>
@@ -859,13 +860,12 @@
 				<string>w!</string>
 				<string>w/o</string>
 				<string>WHILE</string>
+				<string>while</string>
 				<string>with</string>
 				<string>within</string>
 				<string>word</string>
 				<string>wordlist</string>
-				<string>search</string>
 				<string>words</string>
-
 				<string>write-file</string>
 				<string>write-line</string>
 				<string>x-size</string>
@@ -883,17 +883,16 @@
 				<string>xt-new</string>
 				<string>xt-see</string>
 				<string>~~</string>
-
 			</keywords>
 
             <keywords id="Numbers" color="#00f" useforautocomplete="no">
-				<string><regex>(?&lt;=[^[A-Za-z0-9]]|^)((([0-9]+\.[0-9]*)|(\.[0-9]+)([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]))(([uU][lL]?)|([lL][uU]?))?))(?=[^[A-Za-z0-9]]|$)</regex>
+				<string><regex>(?&lt;=[^[A-Za-z0-9]]|^)((([0-9]+\.[0-9]*)|(\.[0-9]+)([eE][+\-]?[0-9]+)?[fFlL]?)|((([1-9][0-9]*)|0[0-7]*|(0[xX][0-9a-fA-F]))(([uU][lL]?)|([lL][uU]?))?))(?=[^[A-Za-z0-9]]|$)</regex></string>
             </keywords>
             <keywords id="Characters" color="#00f" useforautocomplete="no">
-				<string><regex>('.')</regex>
+				<string><regex>('.')</regex></string>
             </keywords>
             <keywords id="FunctionRegex" color="#003369" useforautocomplete="yes">
-				<string><regex>^[a-z][A-Za-z0-9_]*</regex>
+				<string><regex>^[a-z][A-Za-z0-9_]*</regex></string>
             </keywords>
 
         </default>
