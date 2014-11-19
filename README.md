@@ -1,4 +1,3 @@
-forth-coda-see-mode
-===================
+# Forth syntax highlighting mode
 
-Forth syntax highlighting mode for Coda and SubEthaEdit
+Forth syntax highlighting mode for [SubEthaEdit](http://www.codingmonkeys.de/subethaedit/) and [Coda](https://panic.com/coda/).
